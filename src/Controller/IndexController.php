@@ -23,6 +23,15 @@ final class IndexController extends AbstractController
     #[Route('/about', name: 'app_about')]
     public function about(): Response
     {
-        return $this->render('index/about.html.twig');
+        $authorsNames = [
+            'John Doe',
+            'Jane Smith',
+            'Alice Johnson',
+            'Bob Brown'
+        ];
+        return $this->render('index/about.html.twig', [
+            'authors' => $authorsNames,
+        ]);
     }
 }
+

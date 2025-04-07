@@ -2,18 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: black;
-  nav {
-    font-size: 1.2em;
-    ul {
-      li {
-        a {
-          text-decoration: none;
-          color: black;
-        }
-      }
-    }
-  }
-  
-}
+
