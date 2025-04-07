@@ -1,7 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent()}}{% endblock %}
+{% block title %}
+  {{ parent() }}
+{% endblock %}
 
 {% block body %}
-<h1 class="text-2xl font-md text-center">HOMEPAGE</h1>
+  <main>
+    <div class="border solid border-zinc-800 py-4 border-x-0 border-y-2">
+      <h1 class="text-6xl font-md text-center">Lens of Truth: Journalism with Purpose</h1>
+    </div>
+    <div class="flex flex-row w-10/12 mx-auto mt-4 justify-around items-center max-sm:w-full max-sm:flex-col-reverse"> 
+      <hgroup class="w-6/12 max-sm:w-full max-sm:mt-8 max-sm:mx-2">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores mollitia veritatis ut ipsam quo porro, sapiente aut consequatur! Optio rem quod enim, commodi iure ab autem cupiditate esse eos dolor. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores mollitia veritatis ut ipsam quo porro, sapiente aut consequatur! Optio rem quod enim, commodi iure ab autem cupiditate esse eos dolor. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores mollitia veritatis ut ipsam quo porro, sapiente aut consequatur! Optio rem quod enim, commodi iure ab autem cupiditate esse eos dolor.</p>
+      </hgroup>
+      <div>
+        <img src="{{ asset('images/bw-butterfly.jpg') }}" class="w-80 h-80 object-cover mx-auto mt-4 rounded-full shadow-lg" alt="Lens of Truth Logo" />
+      </div>
+      </div>
+    </main>
 {% endblock %}
