@@ -1,7 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent()}}{% endblock %}
+{% block title %}
+  Hello ContactController!
+{% endblock %}
 
 {% block body %}
-<h1 class="text-6xl font-md text-center">CONTACT</h1>
+  <main>
+    <div class="border solid border-zinc-800 py-4 border-x-0 border-y-2 mx-8">
+      <h2 class="text-3xl font-bold text-center">About</h2>
+    </div>
+
+    <div class="flex space-x-4 mb-4">
+      <div class="bg-zinc-600 text-gray-200 border-0 rounded-md p-2 w-1/2 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-zinc-500 transition ease-in-out duration-150">{{ form_row(contactForm.firstname) }}</div>
+      <div class="bg-zinc-600 text-gray-200 border-0 rounded-md p-2 w-1/2 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-zinc-500 transition ease-in-out duration-150">{{ form_row(contactForm.lastname) }}</div>
+    </div>
+    <div class="bg-zinc-600 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150">{{ form_row(contactForm.email) }}</div>
+    <div class="bg-zinc-600 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150">{{ form_row(contactForm.subject) }}</div>
+    <div class="bg-zinc-600 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150">{{ form_row(contactForm.message) }}</div>
+    {# {% for name in authors %}
+        <li>{{ name }}</li>
+      {% endfor %} #}
+  </main>
 {% endblock %}

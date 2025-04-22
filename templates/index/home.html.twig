@@ -6,17 +6,41 @@
 
 {% block body %}
   <main>
-    <div class="border solid border-zinc-800 py-4 border-x-0 border-y-2">
-      <h1 class="text-6xl font-md text-center">Lens of Truth: Journalism with Purpose</h1>
+    <div class="border solid border-zinc-800 py-4 border-x-0 border-y-2 mx-4">
+      <h1 class="text-6xl font-md text-center">Lens of Truth: Showing what matters</h1>
     </div>
-    <div class="flex flex-row w-10/12 mx-auto mt-4 justify-around items-center max-sm:w-full max-sm:flex-col-reverse"> 
+    <span>
+    <h2 class="text-center text-3xl my-10"> Why We Choose Black and White</h2>
+      <hgroup class="w-9/12 mx-auto my-8 justify-around items-center max-sm:w-full max-sm:flex-col-reverse">
+        <p class="text-lg">In a world saturated with color, our decision to present our website and photography exclusively in black and white is deliberate and meaningful.</p>
+        <p class="text-lg"><strong>Black</strong> and <strong>white</strong> photography strips away the distractions of color to focus on the fundamental elements of visual storytelling: light, shadow, texture, composition, and emotion. Without color to guide the viewer's attention, each image must stand on the strength of its core visual elements and the moment it captures. This monochromatic approach creates a timeless quality that <strong>transcends trends</strong>. </p> <br>
+        <p class="text-lg">While color photographs often betray their era through fashion and color processing techniques, black and white images maintain a classic, enduring appeal that connects contemporary work with the rich history of photographic tradition. The absence of color also creates a <strong>consistency across our portfolio</strong> and website that unifies diverse subjects and scenes. Whether we're capturing intimate portraits, sweeping landscapes, or quiet still lifes, the black and white presentation creates a cohesive visual language that reflects our artistic vision.</p><br>
+        <p class="text-lg">This aesthetic isn't about nostalgia or technical limitation—it's a conscious artistic choice that emphasizes the <strong>essence of our subjects</strong> and invites you to see the world through a different lens, one that <strong>reveals truths often hidden by the dazzle of color</strong>.</p><br>
+      </hgroup>
+    </span>
+    <div class="flex flex-row w-10/12 mx-auto my-10 justify-around items-center max-sm:w-full max-sm:flex-col-reverse">
+      <div>
+        <img src="{{ asset('images/club.jpg') }}" class="w-80 h-80 object-cover mx-auto mt-4 rounded-full shadow-lg" alt="Club picture" />
+      </div>
       <hgroup class="w-6/12 max-sm:w-full max-sm:mt-8 max-sm:mx-2">
-      <p>In a world of noise, we seek clarity. Like a butterfly drawn to a single flower, our journalism focuses on what truly matters. At Lens of Truth, we distill complex realities into essential insights, bringing you news that illuminates rather than overwhelms. Thoughtful, purposeful, and uncompromising—because the truth, like nature itself, is both simple and profound.
-      <br> We believe journalism should be a gentle landing place for curious minds. Our coverage cuts through partisan rhetoric and sensationalism to reveal the simple truths that connect us. Follow our focused reporting as we alight on stories that matter, bringing perspective to a chaotic information landscape. Lens of Truth—where clarity isn't just our method, it's our mission.</p>
+        <strong class="text-xl">Our Mission</strong><p class="text-lg">At Lens of Truth, we believe in the power of images to tell stories, raise awareness, and inspire creativity. Our mission is to provide you with easy access to exceptional photographic magazines, whether they're iconic publications or rare gems from the independent scene.</p>
+      </hgroup>
+    </div>
+    <div class="flex flex-row w-10/12 mx-auto my-10 justify-around items-center max-sm:w-full max-sm:flex-col-reverse">
+      <hgroup class="w-6/12 max-sm:w-full max-sm:mt-8 max-sm:mx-2">
+        <strong class="text-xl">Our Selection</strong><p class="text-lg">Explore our diverse catalog covering all photographic genres: photojournalism, fashion, nature, architecture, portraiture, conceptual photography, and much more. Whether you're a seasoned professional, a passionate amateur, or simply a lover of beautiful images, you'll find magazines that match your interests in our collection.</p>
       </hgroup>
       <div>
-        <img src="{{ asset('images/bw-butterfly.jpg') }}" class="w-80 h-80 object-cover mx-auto mt-4 rounded-full shadow-lg" alt="Lens of Truth Logo" />
+        <img src="{{ asset('images/tree.jpg') }}" class="w-80 h-80 object-cover mx-auto mt-4 rounded-full shadow-lg" alt="Flower in black and white" />
       </div>
+    </div>
+    <div class="flex flex-row w-10/12 mx-auto my-10 justify-around items-center max-sm:w-full max-sm:flex-col-reverse">
+      <div>
+        <img src="{{ asset('images/promenade.jpg') }}" class="w-80 h-80 object-cover mx-auto mt-4 rounded-full shadow-lg" alt="Single Tree black and white" />
       </div>
-    </main>
+      <hgroup class="w-6/12 max-sm:w-full max-sm:mt-8 max-sm:mx-2">
+        <strong class="text-xl">Quality Commitment</strong><p class="text-lg">Each magazine offered on our platform is carefully evaluated for its editorial quality, printing, and visual content. We work directly with publishers and distributors to guarantee authentic publications, delivered in the best conditions.</p>
+      </hgroup>
+    </div>
+  </main>
 {% endblock %}

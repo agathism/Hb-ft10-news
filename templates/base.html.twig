@@ -12,12 +12,15 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body class="mx-4 bg-zinc-100">
+    <body>
         <header>
            {{ include('nav.html.twig')}}
         </header>
         {% block body %}
             
         {% endblock %}
+        <footer>
+           {{ include('footer.html.twig')}}
+        </footer>
     </body>
 </html>

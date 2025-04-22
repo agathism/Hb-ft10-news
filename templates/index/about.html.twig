@@ -5,19 +5,14 @@
 {% endblock %}
 
 {% block body %}
-<div class="order solid border-zinc-800 py-4 border-x-0 border-y-2">
-    <h1 class="text-4xl font-bold text-center">Collaborators</h1>
+  <main>
+    <div class="border solid border-zinc-800 py-4 border-x-0 border-y-2 mx-8">
+      <h2 class="text-3xl font-bold text-center">About</h2>
     </div>
-    
-  <ul>
-    {% for name in authors %}
-      <li>{{ name }}</li>
-    {% endfor %}
-    </ul>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget massa
-    interdum, rhoncus ex dignissim, ultricies tellus. Proin convallis mauris ut
-    est pulvinar aliquet. Nulla facilisi.
-  </p>
 
+    <p>Founded with passion for visual storytelling, Lens of Truth bridges the gap between exceptional photography publications and enthusiasts worldwide. Our curated marketplace connects readers with both renowned magazines and hidden gems from independent publishers, all celebrating the art of photography. </p>
+      {# {% for name in authors %}
+        <li>{{ name }}</li>
+      {% endfor %} #}
+  </main>
 {% endblock %}
