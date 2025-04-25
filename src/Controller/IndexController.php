@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Mail\NewsletterSubscribedConfirmation;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -59,7 +60,20 @@ final class IndexController extends AbstractController
             $em->persist($contact);
             $em->flush();
 
-            return $this->redirectToRoute('homepage');
+            //envoyer un email de confirmation
+            // Construire le message
+            // $email = (new Email())
+            // ->from('admin@hbft10.fr')
+            // ->to($contact->getEmail())
+            // ->subject('Welcome!')
+            // ->text('Your email ' . $contact->getEmail() . ' has been successfully registered for the newsletter.')
+            // ->html('<p>Your Email' . $contact->getEmail() . ' has been successfully registered for the newsletter.</p>');
+
+            // // Envoyer le message
+            // $mailer->send($email);
+
+            // Ajouter un message flash
+            $this->addFlash('success', 'You have successfully sent your mail.');
         }
         return $this->render('index/contact.html.twig', [
         'contactForm' => $form 
@@ -67,7 +81,7 @@ final class IndexController extends AbstractController
     }
 
     #[Route('/newsletter', name: 'app_newsletter_subscribe')]
-    public function subscribe(Request $request, EntityManagerInterface $em): Response
+    public function subscribe(Request $request, EntityManagerInterface $em, NewsletterSubscribedConfirmation $confirmationService): Response
     {
         $newsletter = new Newsletter();
         $form = $this->createForm(NewsletterType::class, $newsletter);
@@ -79,9 +93,9 @@ final class IndexController extends AbstractController
             $em->persist($newsletter);
             $em->flush();
 
-            $this->addFlash('success', 'You have successfully subscribed to the newsletter!');
-            //envoyer un email de confirmation
-            return $this->redirectToRoute('homepage');
+            $confirmationService->sendEmail($newsletter);
+            // Ajouter un message flash
+            $this->addFlash('success', 'You have successfully subscribed to the newsletter!. You will receive a confirmation email shortly.');
         }
         return $this->render('index/subscribe.html.twig', [
             'newsletterForm' => $form

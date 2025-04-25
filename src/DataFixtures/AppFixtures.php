@@ -29,7 +29,7 @@ class AppFixtures extends Fixture
             $article->setDescription($faker->text(200));
             $article->setContent($faker->realTextBetween(250, 500));
             $article->setCreatedAt($faker->dateTimeBetween('-3 years')); 
-            $article->setVisible(visible: true);
+            $article->setVisible(visible: $faker->boolean(70));
 
             $randomCategories = $categories[array_rand($categories)];
             $article->setCategory($randomCategories);
