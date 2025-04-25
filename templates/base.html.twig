@@ -22,7 +22,7 @@
   <body>
     <header>{{ include('nav.html.twig') }}</header>
     {% for message in app.flashes('success') %}
-      <div class="bg-green-600 text-white px-6 py-4">{{ message }}</div>
+      <div class="bg-zinc-300 text-black px-6 py-4">{{ message }}</div>
     {% endfor %}
     {% block body %}
 
