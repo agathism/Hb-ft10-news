@@ -15,5 +15,17 @@
     <li>
       <a class="hover:bg-zinc-200 translate-all block py-4 px-5 list-none" href="{{path('app_contact')}}">Contact</a>
     </li>
+    {% if is_granted('ROLE_ADMIN') %}
+    <li>
+      <a class="hover:bg-zinc-200 translate-all block py-4 px-5 list-none" href="{{path('app_profile')}}">Profil</a>
+    </li>
+    <li>
+      <a class="hover:bg-zinc-200 translate-all block py-4 px-5 list-none" href="{{path('app_logout')}}">Déconnexion</a>
+    </li>
+    {% else %}
+    <li>
+      <a class="hover:bg-zinc-200 translate-all block py-4 px-5 list-none" href="{{path('app_login')}}">Login</a>
+    </li>
+    {% endif %}
   </ul>
 </nav>
